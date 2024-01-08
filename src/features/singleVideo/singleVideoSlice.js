@@ -13,7 +13,6 @@ export const fetchVideo = createAsyncThunk('video/fetchVideo', async (id) => {
     return video;
 })
 
-console.log(getSingleVideo(), 'heleo');
 
 const videoSlice = createSlice({
     name: 'singleVideo',

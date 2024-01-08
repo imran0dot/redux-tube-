@@ -54,7 +54,7 @@ export default function Video() {
                         }} />
                     </div>
 
-                    <RelatedVideoList />
+                    <RelatedVideoList currentVideoId={id} tags={tags} />
                 </div>
             </div>
         </section>
