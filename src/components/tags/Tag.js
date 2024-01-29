@@ -8,7 +8,7 @@ export default function Tag({ tag }) {
         dispatch(selectTag(tag.title))
     };
 
-    const active = selectedTags.includes(tag.title) ? true : false
+    const active = selectedTags.includes(tag.title);
     return (
         <div
             onClick={handleClick}
@@ -22,10 +22,4 @@ export default function Tag({ tag }) {
             {tag.title}
         </div>
     );
-}
-
-{
-    /* <div className="bg-blue-600 text-white px-4 py-1 rounded-full cursor-pointer">
-redux
-</div> */
 }
