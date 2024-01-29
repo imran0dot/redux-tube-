@@ -5,13 +5,14 @@ import { fetchVideos } from "../../features/videos/videosSlice";
 
 export default function VideGrid() {
     const dispatch = useDispatch();
-    const videos = useSelector(state => state.videos)
+    const videos = useSelector(state => state.videos);
+    const { selectedTags: tags, searchInput } = useSelector(state => state.filterVideo);
 
     useEffect(() => {
-        dispatch(fetchVideos());
-    }, [dispatch]);
+        dispatch(fetchVideos({ tags, searchInput }));
+    }, [dispatch, tags, searchInput]);
 
-    if(videos.isLoading){
+    if (videos.isLoading) {
         return 'loading...'
     }
 

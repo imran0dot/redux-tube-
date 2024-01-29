@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import logoImage from "../../assets/youtube.png";
-import searchImage from "../../assets/search.svg";
 import Search from "./Search";
 
 export default function Navbar() {

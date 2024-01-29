@@ -7,8 +7,8 @@ export default function Tag({ tag }) {
     const handleClick = () => {
         dispatch(selectTag(tag.title))
     };
-
     const active = selectedTags.includes(tag.title);
+    
     return (
         <div
             onClick={handleClick}
